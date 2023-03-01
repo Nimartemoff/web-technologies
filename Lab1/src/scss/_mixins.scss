@@ -1,0 +1,21 @@
+@import './variables';
+@import './functions';
+
+@mixin cards {
+    width: $cube-size;
+    height: $cube-size;
+    margin-right: 70px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: left;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 175px;
+    display: block;
+
+    @for $i from 0 to $count {
+        &:nth-child(#{$i}) {
+        background-color: color-count($i);
+        }
+    }
+}

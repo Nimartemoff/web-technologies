@@ -1,0 +1,32 @@
+@import './mixins';
+
+body {
+    div.cube-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        
+        width: 1000px;
+        height: 600px;
+        margin:auto;
+
+        #pseudo-elem {
+            width: 500px;
+        }
+
+        div.card {
+            @include cards;
+
+            h2 {
+                position: relative;
+                top: $cube-size;
+            }
+
+            p {
+                position: relative;
+                top: $cube-size;
+            }
+        }
+    }
+}
