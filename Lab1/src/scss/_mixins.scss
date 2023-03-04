@@ -13,9 +13,9 @@
     margin-bottom: 175px;
     display: block;
 
-    @for $i from 0 to $count {
+    @for $i from 1 through 12 {
         &:nth-child(#{$i}) {
-        background-color: color-count($i);
+            background-color: color-count($i);
         }
     }
 }

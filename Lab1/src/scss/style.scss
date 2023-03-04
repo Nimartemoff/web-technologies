@@ -1,32 +1,78 @@
 @import './mixins';
 
 body {
-    div.cube-container {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
 
-        
-        width: 1000px;
-        height: 600px;
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .container {
         margin:auto;
-
-        #pseudo-elem {
-            width: 500px;
+        display: flex;
+        width: 1000px;
+        flex-direction: column;
+        header {
+            width: 100%;
+            margin: auto;
+            border: 1px solid blue;
+            height: 60px;
+    
+            img {
+                margin-left: 10px;
+                margin-top: 13px;
+                width: 50px;
+                height: 40px;
+            }
+    
+            span {
+                position: relative;
+                left: 30px;
+                bottom: 15px;
+            }
+    
+            button {
+                background-color: blue;
+                position: relative;
+                width: 60px;
+                height: 30px;
+                color: white;
+                border: 0px;
+                left: 750px;
+                bottom: 20px;
+            }
         }
+    
+        .cube-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+    
+            
+            width: 100%;
+            margin:auto;
+    
+            .card {
+                @include cards;   
 
-        div.card {
-            @include cards;
-
-            h2 {
-                position: relative;
-                top: $cube-size;
+                h2 {
+                    position: relative;
+                    top: $cube-size;
+                }
+    
+                p {
+                    position: relative;
+                    top: $cube-size;
+                }
             }
-
-            p {
-                position: relative;
-                top: $cube-size;
-            }
+        }
+    
+        footer {
+            width: 100%;
+                margin: auto;
+                .line {
+                    border: 1px solid black;
+                }
         }
     }
+    
 }
